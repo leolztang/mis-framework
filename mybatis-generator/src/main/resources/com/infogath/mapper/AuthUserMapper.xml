@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.infogath.dao.AuthUserMapper">
+  <resultMap id="BaseResultMap" type="com.infogath.model.AuthUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="DECIMAL" property="id" />
+    <result column="LOGIN_ID" jdbcType="VARCHAR" property="loginId" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="ENABLED" jdbcType="DECIMAL" property="enabled" />
+    <result column="LOCKED" jdbcType="DECIMAL" property="locked" />
+    <result column="CREATE_TIMESTAMP" jdbcType="TIMESTAMP" property="createTimestamp" />
+    <result column="UPDATE_TIMESTAMP" jdbcType="TIMESTAMP" property="updateTimestamp" />
+  </resultMap>
+</mapper>

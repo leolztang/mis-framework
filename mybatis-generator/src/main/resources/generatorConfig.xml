@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="mybatisGen" targetRuntime="MyBatis3Simple">
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper" />
+            <!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+            <property name="caseSensitive" value="true" />
+        </plugin>
+
+        <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@111.230.197.43:49161:xe"
+                        userId="infogath"
+                        password="UJIKolp;">
+        </jdbcConnection>
+
+        <!--自动生成的实体的存放包路径 -->
+        <javaModelGenerator targetPackage="com.infogath.model" targetProject="src/main/java"/>
+
+        <!--自动生成的*Mapper.xml文件存放路径 -->
+        <sqlMapGenerator targetPackage="com.infogath.mapper" targetProject="src/main/resources"/>
+
+        <!--自动生成的*Mapper.java存放路径 -->
+        <javaClientGenerator targetPackage="com.infogath.dao" targetProject="src/main/java" type="XMLMAPPER"/>
+
+        <table tableName="auth%">
+            <generatedKey column="id" sqlStatement="Oracle" identity="true"/>
+        </table>
+
+    </context>
+
+</generatorConfiguration>
